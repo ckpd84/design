@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+
+@tailwind base;
+
+@layer base {
+	body {
+		@apply font-montserrat text-xs tracking-widest leading-7;
+	}
+	h1 {
+		font-size: 8vmin;
+	}
+	h2 {
+		font-size: 4vmin;
+	}
+	h3 {
+		font-size: 2.5vmin;
+	}
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply uppercase font-extrabold;
+	}
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+}
+.main {
+	min-height: calc(100vh - 44px - 300px);
+	@apply flex flex-col;
+}
+.text-shadow {
+	text-shadow: 2px 2px 2px lightgrey;
+}
+.slider {
+	width: 50%;
+	margin: auto;
+	overflow: hidden;
+}
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+
+	animation: cambio 20s infinite alternate ease-in;
+	-moz-animation: cambio 20s infinite alternate ease-in;
+	-webkit-animation: cambio 20s infinite alternate ease-in;
+}
+.slider li {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {
+		margin-left: 0;
+	}
+	20% {
+		margin-left: 0;
+	}
+
+	25% {
+		margin-left: -100%;
+	}
+	45% {
+		margin-left: -100%;
+	}
+
+	50% {
+		margin-left: -200%;
+	}
+	70% {
+		margin-left: -200%;
+	}
+
+	75% {
+		margin-left: -300%;
+	}
+	100% {
+		margin-left: -300%;
+	}
+}
